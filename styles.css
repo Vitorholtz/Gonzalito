@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
 /*Global styles*/
+
+@font-face {
+    font-family: troika;
+    src: url(fonts/troika.otf);
+  }
+  
 *,
 *::before,
 *::after{
@@ -8,20 +14,9 @@
     box-sizing: border-box;
 }
 
-:root{
-    --main-font: 'Source Sans Pro', sans-serif;
-    --secondary-font: 'Herr Von Muellerhoff', cursive;
-    --body-font: 'Cabin', sans-serif;
-    --main-font-color-dark: #252525;
-    --secondary-font-color: #c59d5f;
-    --body-font-color: #515151;
-}
-
 html {
 
-    font-family: var(--body-font);
     font-size: 10px;
-    color: var(--body-font-color);
     scroll-behavior: smooth;
 }
 
@@ -40,16 +35,24 @@ img {
     max-width: 100%;
 }
 
+section img {
+
+    
+}
+
 a {
     text-decoration: none;
 }
 
 p {
-    font-size: 1.6rem;
+    color: rgb(110, 110, 110);
+    font-size: 2rem;
+    font-family: verdana;
 }
 
 .container {
-
+    display:flex;
+    flex-direction: column;
     width: 100%;
     max-width: 122.5rem;
     margin: 0 auto;
@@ -64,15 +67,22 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent );
+    background-color: #D03232;
+    opacity: 90%;
 }
 
 .nav {
-    height: 7.2rem;
+    height: auto;
+    padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.logo {
+
+    width: 14rem;
 }
 
 .menu-toggle {
@@ -147,22 +157,23 @@ header {
 }
 
 .nav-item {
-    border-bottom: 2px solid rgba(255,255,255, .3)
+    border-bottom: 2px solid rgba(255,255,255, .3);
+    font-family: troika;
 }
 
 .nav-link {
     display: block;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.6rem;
     letter-spacing: 2px;
     margin-right: -2px;
     transition: .5s;
+    
 
 }
 
 .nav-link:hover {
-    color: var(--secondary-font-color);
+    color: rgba(255, 251, 0, 0.877);
 }
 
 /*hero*/
@@ -170,18 +181,28 @@ header {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url(imagens/hero.jpg) center no-repeat;
+    background: url(imagens/hero2.jpg) center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.sub-headline {
+.gonza {
 
+    width: 23rem;
+}
+
+
+.headline img {
+
+    width: 40rem;
+}
+
+.sub-headline {
     font-size: 8.5rem;
-    font-family: var(--secondary-font);
-    color: var(--secondary-font-color);
+    font-family: troika;
+    color: #D03232;
     font-weight: 100;
     line-height: .4;
     letter-spacing: 2px;
@@ -191,17 +212,12 @@ header {
 
 }
 
-.first-letter {
-    text-transform: uppercase;
-    font-size: 10.3rem;
-
-}
 
  .headline {
 
     color: #fff;
     font-size: 3.7rem;
-    font-family: var(--main-font);
+    font-family: troika;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: .5rem;
@@ -211,65 +227,31 @@ header {
   
  }
 
- .separator {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-
- }
-
- .line {
-    width: 100%;
-    max-width: 8.4rem;
-    height: .25rem;
-    background-color: #fff;
-    position: relative;
-    opacity: 0;
-    animation: grow 2s forwards;
-    animation-delay: .9s;
- }
-
- .line-right::before, .line-left::before  {
-
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translatey(-50%);
-    border: .6rem solid transparent;
-    opacity: 0;
-    animation: grow .5s forwards;
-    animation-delay: 1.2s;
-
- }
-
- .line-right::before {
-
-    border-right-color: #fff;
-    right: 0;
-
-
- }
-
- .line-left::before {
-
-    border-left-color: #fff;
-    left: 0;
-
-
- }
-
- .asterisk {
-     font-size: 1.2rem;
-     color: var(--secondary-font-color);
-     margin: 0 1.6rem;
-
- }
-
+ 
+ 
  .single-animation {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      opacity: 0;
      animation: fadeDown .5s forwards;
-     animation-delay: 1.5s;
+     animation-delay: 1s;
+    
  }
+
+ .single-animation .gonzaorn {
+     width: 40rem;
+     transform: translate(0px, -20px);
+  
+ 
+ }
+
+ .single-animation .gonzaslogan {
+    width: 15rem;
+    position: absolute;
+    transform: translate(0px, -20px);
+    
+}
 
 
  .headline-description h5 {
@@ -282,28 +264,7 @@ header {
      margin-right: -3px;
  }
 
- .btn {
-     display: inline-block;
-     text-transform: uppercase;
-     letter-spacing: 2px;
-     margin-right: -2px;
- }
 
- .cta-btn {
-
-    font-size: 1.1rem;
-    background-color: #fff;
-    padding: .9rem 1.8rem;
-    color: var(--body-font-color);
-    border-radius: .4rem;
-    transition: background-color .5s;
- }
-
- .cta-btn:hover, .cta-btn:focus {
-
-    color: #fff;
-    background-color: var(--secondary-font-color);
- }
 
  /*Discover our story*/
 
@@ -313,21 +274,17 @@ header {
 
  }
 
- .discover-our-story .global-headline {
 
-    margin-top: 6.9rem;
+ .discover-our-story {
 
- }
-
- .global-headline .asterisk {
-
-    color: var(--body-font-color);
-    margin: 2.4rem 0 ;
+    margin: 10rem 0;
 
  }
+
+
 
  .headline-dark {
-     color: var(--main-font-color-dark);
+     color: #683A02;
      letter-spacing: .7rem;
      margin-right: -.7rem;
  }
@@ -345,6 +302,15 @@ header {
 
  }
 
+ .restaurant-info img:not(.divider) {
+    box-shadow: 10px 10px 0px -1px rgba(208,50,50,1);
+ }
+
+ .divider {
+     width: 15rem;
+     margin: 1rem 0;
+ }
+
  .restaurant-description {
      margin-bottom: 3rem;
  }
@@ -354,40 +320,10 @@ header {
      line-height: 3rem;
      margin-bottom: 2.4rem;
 
- }
-
- .body-btn {
-
-    font-size: 1.5rem;
-    color: var(--secondary-font-color);
-    position: relative;
-    transition: color .5s;
 
  }
 
- .body-btn:before {
-     content: '';
-     position: absolute;
-     width: 100%;
-     height: 2px;
-     left:0;
-     bottom: -3px;
-     background-color: var(--secondary-font-color);
-     transition: background-color .5s;
 
-
- }
-
- .body-btn:hover, .body-btn:focus {
-     color: var(--main-font-color-dark);
-
- }
-
- .body-btn:hover::before, .body-btn:focus::before {
-
-    background-color: var(--main-font-color-dark);
-
- }
 
  /*Tasteful Recipes*/
 
@@ -415,6 +351,11 @@ header {
 
     padding-top: 3rem;
     margin-bottom: 0;
+    margin: 10rem auto;
+ }
+
+ .culinary-delight {
+    margin: 10rem auto;
  }
 
  
@@ -430,7 +371,7 @@ header {
 
  footer {
      padding: 7.9rem 0;
-     background-color: #121212;
+     background-image: url(imagens/pattern.jpg);
      color: #fff;
      text-align: center;
      position: relative;
@@ -476,11 +417,7 @@ header {
      
      }
 
-     .footer-content .asterisk {
-         margin: 2.4rem 0;
-
-     }
-
+  
      .footer-content-about {
 
         margin-bottom: 5.4rem;
@@ -553,7 +490,6 @@ header {
         section {
             padding: 7.9rem;
 
-
         }
 
         .menu-toggle {
@@ -576,6 +512,7 @@ header {
             flex-direction: row;
             transform: initial;
             transition:initial;
+            font-size: 10em;
 
 
         }
@@ -583,6 +520,7 @@ header {
         .nav-item {
             margin: 0 2.4rem;
             border:none;
+            font-family: troika;
 
         }
 

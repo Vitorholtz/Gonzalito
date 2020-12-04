@@ -68,7 +68,7 @@ header {
     left: 0;
     z-index: 1;
     background-color: #D03232;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .nav {
@@ -190,14 +190,28 @@ header {
 
 .gonza {
 
-    width: 23rem;
+    width: 55%;
 }
-
 
 .headline img {
 
     width: 40rem;
 }
+
+.gonzaorn {
+    width: 40rem;
+    transform: translate(0px, -20px);
+ 
+
+}
+
+.gonzaslogan {
+   width: 35%;
+   position: absolute;
+   transform: translate(0px, -20px);
+   
+}
+
 
 .sub-headline {
     font-size: 8.5rem;
@@ -239,19 +253,7 @@ header {
     
  }
 
- .single-animation .gonzaorn {
-     width: 40rem;
-     transform: translate(0px, -20px);
-  
  
- }
-
- .single-animation .gonzaslogan {
-    width: 15rem;
-    position: absolute;
-    transform: translate(0px, -20px);
-    
-}
 
 
  .headline-description h5 {
@@ -300,6 +302,7 @@ header {
 
     text-align:center;
 
+
  }
 
  .restaurant-info img:not(.divider) {
@@ -313,6 +316,7 @@ header {
 
  .restaurant-description {
      margin-bottom: 3rem;
+
  }
 
  .restaurant-description p {
@@ -320,9 +324,7 @@ header {
      line-height: 3rem;
      margin-bottom: 2.4rem;
 
-
  }
-
 
 
  /*Tasteful Recipes*/
@@ -343,7 +345,7 @@ header {
 
  .image-group{
      display: grid;
-     grid-template-columns: repeat(2,1fr);
+     grid-template-columns: repeat(1,1fr);
      grid-gap: 1.5rem;
  }
 
@@ -472,18 +474,35 @@ header {
 
         background-color: transparent;
         border: none;
-        color: var(--main-font-color-dark);
+        color: rgb(49, 49, 49);
         cursor: pointer;
         font-size: 1.6rem;
         padding: 1px .6rem;
         position: absolute;
-        top: 50%;
-        transform: translatey(-50%);
-        margin-left: 15rem;
+        top: 25%;
+        margin-left: 20rem;
 
      }
 
      /*Medias */
+
+     @media screen and (min-width: 450px) {
+
+        .gonza {
+            width: 23rem;
+        }
+        
+       .gonzaslogan {
+           width: 15rem;
+           
+        }
+
+        .image-group{
+            grid-template-columns: repeat(2,1fr);
+        }
+
+
+     }
 
      @media screen and (min-width: 900px){
 
@@ -620,6 +639,7 @@ header {
 
 
      }
+
 
        /* Animations */
 

@@ -108,7 +108,7 @@ header {
     left: 0;
     width: 80%;
     height: 100vh;
-    background-color: var(--main-font-color-dark);
+    background-color: rgb(168, 0, 0);
     padding: 4.4rem;
     display: flex;
     flex-direction: column;
@@ -237,7 +237,8 @@ header {
     letter-spacing: .5rem;
     margin-right: -.5rem;
     margin-top: 1rem; 
-    animation: scale .5s forwards;
+    animation:  scale .7s forwards;
+    
   
  }
 
@@ -450,7 +451,7 @@ header {
      }
 
      .social-icons i:hover, .social-icons i:focus {
-         color: var(--secondary-font-color);
+         color: rgba(255, 211, 17, 0.959);
      }
 
      .newsletter-form {
